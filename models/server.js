@@ -17,7 +17,10 @@ class Server{
         this.app = app;
         this.port = process.env.PORT;
         this.server = http.createServer(this.app);
-        this.io = socketio(this.server);
+        this.io = socketio(this.server,{cors: {
+            origin: "*",
+            methods: ["GET", "POST"]
+          }});
     }
     
     middleWares(){
