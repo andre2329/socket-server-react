@@ -38,7 +38,8 @@
     </div>
 
     <script>
-        const socket = io('http://localhost:8080')
+        // const socket = io('http://localhost:8080')
+        const socket = io('http://https://socket-server-react-1.herokuapp.com/')
         socket.on('mensaje-bienvenida', (data) => {
             console.log(data)
         })
